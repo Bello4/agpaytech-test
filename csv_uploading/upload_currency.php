@@ -93,12 +93,12 @@ if (isset($_POST['importSubmit']))
  
         if ($check->num_rows > 0)
         {
-            $db->query("UPDATE curren SET iso_code = '" . $iso_code . "', iso_numeric_code = '" . $iso_numeric_code . "', common_name = '" . $common_name . "', symbol = '" . $symbol . "', created = NOW() WHERE official_name = '" . $official_name . "'");
+            $db->query("UPDATE currencies SET iso_code = '" . $iso_code . "', iso_numeric_code = '" . $iso_numeric_code . "', common_name = '" . $common_name . "', symbol = '" . $symbol . "', created = NOW() WHERE official_name = '" . $official_name . "'");
 
         }
         else
         {
-            $db->query("INSERT INTO curren (iso_code, iso_numeric_code, common_name, official_name, symbol, created)
+            $db->query("INSERT INTO currencies (iso_code, iso_numeric_code, common_name, official_name, symbol, created)
             VALUES ('" . $iso_code . "', '" . $iso_numeric_code . "', '" . $common_name . "', '" . $official_name . "', '" . $symbol . "', NOW())");
  
         } -->
