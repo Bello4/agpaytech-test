@@ -60,7 +60,7 @@ if (isset($_POST['importSubmit']))
         }
         else
         {
-            $db->query("INSERT INTO countrynew (continent_code, currency_code, iso2_code, iso3_code, iso_numeric_code, fips_code, calling_code, common_name, official_name, endonym, demonym, created)
+            $db->query("INSERT INTO countries (continent_code, currency_code, iso2_code, iso3_code, iso_numeric_code, fips_code, calling_code, common_name, official_name, endonym, demonym, created)
             VALUES ('" . $continent_code . "', '" . $currency_code . "', '" . $iso2_code . "', '" . $iso3_code . "', '" . $iso_numeric_code . "', '" . $fips_code . "', '" . $calling_code . "', '" . $common_name . "', '" . $official_name . "', '" . $endonym . "', '" . $demonym . "', NOW())");
  
         }
